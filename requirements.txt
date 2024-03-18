@@ -1,1 +1,5 @@
 bosdyn-client
+
+numpy
+opencv-python
+scipy
