@@ -1,14 +1,14 @@
 import os
 import time
 from spot_controller import SpotController
-
+from mb.agent import Agent
 ROBOT_IP = "192.168.80.3"#os.environ['ROBOT_IP']
 SPOT_USERNAME = "admin"#os.environ['SPOT_USERNAME']
 SPOT_PASSWORD = "2zqa8dgw7lor"#os.environ['SPOT_PASSWORD']
 
 
 def main():
-
+    agent = Agent()
     # Use wrapper in context manager to lease control, turn on E-Stop, power on robot and stand up at start
     # and to return lease + sit down at the end
     with SpotController(username=SPOT_USERNAME, password=SPOT_PASSWORD, robot_ip=ROBOT_IP) as spot:
