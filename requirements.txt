@@ -3,3 +3,4 @@ bosdyn-client
 numpy
 opencv-python
 scipy
+rn-cli
